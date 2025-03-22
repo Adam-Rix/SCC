@@ -14,7 +14,7 @@ File for operate web_driver: \
 2.2 **default_argument** = Incognito.
 
 # request_searcher.py
-Script for searching a requests on swagger page and building a list with requests and their content body.
+Script for searching any requests on swagger page and building a list with requests and their content body.
 
 # resources dir
 Use that if u have your own .env
