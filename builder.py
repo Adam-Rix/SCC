@@ -1,3 +1,5 @@
+#vers 0.0.2
+
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
@@ -15,8 +17,10 @@ class Ratt:
         WebDriverWait(self.driver, 5).until(
             EC.text_to_be_present_in_element(
                 (By.TAG_NAME, "body"),  # Search in the entire page body
-                "Failed to load API definition."
+                "Schemas"
             )
         )
 
         print("Error message detected!")
+
+    #def collect_reqsts(self,  driver) -- needs an update

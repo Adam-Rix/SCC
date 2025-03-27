@@ -1,6 +1,9 @@
+#vers 0.0.1
+
 import os
 import yaml
 import pytest
+
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 
