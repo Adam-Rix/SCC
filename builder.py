@@ -1,4 +1,4 @@
-#vers 0.0.2
+#vers 0.0.3
 
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
@@ -21,6 +21,6 @@ class Ratt:
             )
         )
 
-        print("\n" + "~Requests found: " + "\n")
+        print("\n \n" + "~Requests found: " + "\n")
 
     #def collect_reqsts(self,  driver) -- needs an update

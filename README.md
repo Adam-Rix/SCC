@@ -5,7 +5,8 @@ Swagger Contract Checker - created to verify contracts between back-end and fron
 The main script, needable for executing all your swagger requests.
 
 # conftest.py 
-File for operate web_driver: \
+File for operate web_driver: 
+
 1. **main_framework** = Pytest; \
 1.1 **default_scope_for_entire_tests** = Session; \
 1.2 **default_scope_for_reading_envs** = Function.
@@ -23,17 +24,19 @@ The main fabric of all functions
 Use that if u have your own .env
 
 # example of output
-ASSED [100%]
+PASSED [100%]
 
-Total API requests found: 7
+~Requests found: 
 
-POST - /some/api/path
-POST - /some/api/path
-GET - /some/api/path/{smth}
-PUT - /some/api/path/{smth}
-DELETE - /some/api/path/{smth}
-PUT - /some/api/path
-POST - some/api/path
+~Total API requests found: 7
+
+POST - /some/api/path \
+POST - /some/api/path \
+GET - /some/api/path/{smth} \
+PUT - /some/api/path/{smth} \
+DELETE - /some/api/path/{smth} \
+PUT - /some/api/path \
+POST - /some/api/path 
 
 Always is fine
 

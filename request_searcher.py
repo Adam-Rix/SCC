@@ -30,6 +30,6 @@ class Searcher:
                 "path": api_path
             })
 
-        print("\n" + f"~Total API requests found: {len(requests_list)}" + "\n")
+        print(f"~Total API requests found: {len(requests_list)}" + "\n")
         for req in requests_list:
             print(f"{req['method']} - {req['path']}")
