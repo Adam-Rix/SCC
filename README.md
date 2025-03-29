@@ -22,3 +22,18 @@ The main fabric of all functions
 # resources dir
 Use that if u have your own .env
 
+# example of output
+ASSED [100%]
+
+Total API requests found: 7
+
+POST - /some/api/path
+POST - /some/api/path
+GET - /some/api/path/{smth}
+PUT - /some/api/path/{smth}
+DELETE - /some/api/path/{smth}
+PUT - /some/api/path
+POST - some/api/path
+
+Always is fine
+

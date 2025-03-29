@@ -21,6 +21,6 @@ class Ratt:
             )
         )
 
-        print("Error message detected!")
+        print("\n" + "~Requests found: " + "\n")
 
     #def collect_reqsts(self,  driver) -- needs an update
