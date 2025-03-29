@@ -40,3 +40,9 @@ POST - /some/api/path
 
 Always is fine
 
+# plans
+1. Improve request_searcher.py for collecting bodies of each request and examples of each response; 
+2. Write a script for sending requests with api paths from 2 arrays; \
+2.2 Improve the script for correlating the response from server with expected; 
+3. Update outputs for better understanding;
+4. Finalize the epic.
