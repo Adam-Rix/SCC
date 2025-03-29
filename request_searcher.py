@@ -1,4 +1,4 @@
-# #vers 0.0.2
+# #vers 0.0.3
 
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
@@ -8,7 +8,6 @@ class Searcher:
         self.driver = driver
 
     def collect_reqsts(self):
-        # driver.find_elements(By.XPATH, f"//button[contains(text(), '{REQUEST_TYPE}')]")
 
         method_elements = self.driver.find_elements(By.CLASS_NAME,
                                                "opblock-summary-method")

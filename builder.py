@@ -22,5 +22,3 @@ class Ratt:
         )
 
         print("\n \n" + "~Requests found: " + "\n")
-
-    #def collect_reqsts(self,  driver) -- needs an update
