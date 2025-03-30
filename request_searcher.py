@@ -48,6 +48,6 @@ class Searcher:
                 "body": body_content
             })
 
-        print("\n" + f"~Total examples of body requests found: {len(body_requests_list)}" + "\n")
+        print("\n" + f"~~Total examples of body requests found: {len(body_requests_list)}" + "\n")
         for bod in body_requests_list:
             print(f"{bod['body']}")

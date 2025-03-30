@@ -21,7 +21,7 @@ class Ratt:
             )
         )
 
-        print("\n \n" + "~Requests found: " + "\n")
+        print("\n \n" + "~~Requests found: " + "\n")
 
     def open_arrows(self):
         """Click to Arrow-button"""
