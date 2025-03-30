@@ -40,9 +40,20 @@ POST - /some/api/path
 
 Always is fine
 
+~Total examples of body requests found: 5
+
+{ \
+  &emsp; "somId": "123", \
+  &emsp; "smthelse": "123" \
+}
+
 # plans
-1. Improve request_searcher.py for collecting bodies of each request and examples of each response; 
-2. Write a script for sending requests with api paths from 2 arrays; \
+1. Improve request_searcher.py for: \
+1.1 Collecting bodies of each request; ✅\
+1.2 Collecting examples of each response; \
+1.3 Replacing non-json responses by response-codes (200, 300, etc.) from examples of responses;
+2. Create a script for work with collections of requests from swagger; \
+2.1 Write a script for sending requests with api paths from 2 arrays; \
 2.2 Improve the script for correlating the response from server with expected; 
 3. Update outputs for better understanding;
 4. Finalize the epic.
