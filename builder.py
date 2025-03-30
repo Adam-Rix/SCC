@@ -1,4 +1,4 @@
-#vers 0.0.3
+#vers 0.0.4
 
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
@@ -22,3 +22,10 @@ class Ratt:
         )
 
         print("\n \n" + "~Requests found: " + "\n")
+
+    def open_arrows(self):
+        """Click to Arrow-button"""
+        arrow_buttons = self.driver.find_elements(By.CLASS_NAME,
+                                 "opblock-control-arrow")
+        for arrow in arrow_buttons:
+            self.driver.execute_script("arguments[0].click();", arrow)

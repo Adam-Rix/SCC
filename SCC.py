@@ -1,4 +1,4 @@
-#vers 0.0.2
+#vers 0.0.3
 
 import pytest
 
@@ -15,8 +15,12 @@ def test_all_requests(driver, swagger_url):
     rat = Ratt(driver)
     searcher = Searcher(driver)
 
+    #open webpage + open all arrow-tabs
     rat.open_swagger_page(swagger_url)
+    rat.open_arrows()
 
+    #collecting requests + body
     searcher.collect_reqsts()
+    searcher.collect_body_reqst()
 
     print("\n" + "Always is fine")
