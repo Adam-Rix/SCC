@@ -11,19 +11,24 @@ from SCC.request_searcher import Searcher
                          ["*here*"])
 def test_all_requests(driver, swagger_url):
 
-    #defining vlues
+    # defining vlues
     rat = Ratt(driver)
     searcher = Searcher(driver)
 
-    #open webpage + open all arrow-tabs
+    # open webpage + open all arrow-tabs
     rat.open_swagger_page(swagger_url)
     rat.open_arrows()
 
-    #collecting requests + body
+    # collecting requests + body
     searcher.collect_request()
     searcher.collect_body_request()
 
-    #collecting body responses
+    # collecting body responses
     searcher.collect_body_response()
 
+    # sending collected_requests from swagger page for v0.0.6
+
+    # correlation of collected and received responses for v0.1.0
+
+    # erase or change this print beneath for v1.0.0
     print("\n" + "Always is fine")

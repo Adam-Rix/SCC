@@ -18,7 +18,7 @@ File for operate web_driver:
 Script for searching any requests on swagger page and building a list with requests and their content body.
 
 # builder.py
-The main fabric of all functions
+The main fabric of web-interactions with the driver.
 
 # resources dir
 Use that if u have your own .env

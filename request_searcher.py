@@ -1,7 +1,6 @@
 #vers 0.1.1
 
 from selenium.webdriver.common.by import By
-from selenium.webdriver.support.ui import WebDriverWait
 
 class Searcher:
     def __init__(self, driver):
