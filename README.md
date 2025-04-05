@@ -62,7 +62,7 @@ Always is fine
 401 — Unauthorized,
 
 # plans
-1. Improve request_searcher.py for: \
+1. Improve request_searcher.py for: ☑️\
 1.1 Collecting bodies of each request; ✅\
 1.2 Collecting examples of each response; ✅\
 1.3 Replacing non-json responses by response-codes (200, 300, etc.) from examples of responses ✅;

@@ -1,4 +1,4 @@
-# #vers 0.1.0
+#vers 0.1.1
 
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
@@ -7,7 +7,7 @@ class Searcher:
     def __init__(self, driver):
         self.driver = driver
 
-    def collect_reqsts(self):
+    def collect_request(self):
 
         method_elements = self.driver.find_elements(By.CLASS_NAME,
                                                "opblock-summary-method")

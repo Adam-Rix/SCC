@@ -1,4 +1,4 @@
-#vers 0.0.4
+#vers 0.0.5
 
 import pytest
 
@@ -20,7 +20,7 @@ def test_all_requests(driver, swagger_url):
     rat.open_arrows()
 
     #collecting requests + body
-    searcher.collect_reqsts()
+    searcher.collect_request()
     searcher.collect_body_request()
 
     #collecting body responses
