@@ -1,4 +1,4 @@
-#vers 0.1.1
+#version 0.1.1
 
 from selenium.webdriver.common.by import By
 

@@ -1,4 +1,4 @@
-#vers 0.0.4
+#version 0.0.4
 
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
