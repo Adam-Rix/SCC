@@ -43,7 +43,7 @@ Always is fine
 ~~Total examples of body requests found: 5
 
 { \
-  &emsp; "somId": "123", \
+  &emsp; "someId": "123", \
   &emsp; "smthelse": "123" \
 },
 
