@@ -40,12 +40,20 @@ POST - /some/api/path
 
 Always is fine
 
-~Total examples of body requests found: 5
+~~Total examples of body requests found: 5
 
 { \
   &emsp; "somId": "123", \
   &emsp; "smthelse": "123" \
-}
+},
+
+~~Total examples of body responses found: 3
+
+{ \
+  "someCats": { \
+    "111": "23213", \
+    "444": "3213" \
+},
 
 # plans
 1. Improve request_searcher.py for: \
