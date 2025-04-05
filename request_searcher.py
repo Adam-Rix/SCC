@@ -1,4 +1,4 @@
-# #vers 0.0.4
+# #vers 0.0.5
 
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
@@ -45,9 +45,27 @@ class Searcher:
             body_content = body_element.text.strip()
 
             body_requests_list.append({
-                "body": body_content
+                "body_request": body_content
             })
 
         print("\n" + f"~~Total examples of body requests found: {len(body_requests_list)}" + "\n")
         for bod in body_requests_list:
-            print(f"{bod['body']}")
+            print(f"{bod['body_request']},")
+
+    def collect_body_response(self):
+
+        body_response_elements = self.driver.find_elements(By.CSS_SELECTOR,
+                                                  "pre.example.microlight")
+
+        body_responses_list = []
+
+        for body_response_element in body_response_elements:
+            body_responses_content = body_response_element.text.strip()
+
+            body_responses_list.append({
+                "body_response": body_responses_content
+            })
+
+        print("\n" + f"~~Total examples of body responses found: {len(body_responses_list)}" + "\n")
+        for bod in body_responses_list:
+            print(f"{bod['body_response']},")

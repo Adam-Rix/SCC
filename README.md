@@ -50,7 +50,7 @@ Always is fine
 # plans
 1. Improve request_searcher.py for: \
 1.1 Collecting bodies of each request; ✅\
-1.2 Collecting examples of each response; \
+1.2 Collecting examples of each response; ✅\
 1.3 Replacing non-json responses by response-codes (200, 300, etc.) from examples of responses;
 2. Create a script for work with collections of requests from swagger; \
 2.1 Write a script for sending requests with api paths from 2 arrays; \

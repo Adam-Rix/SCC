@@ -1,4 +1,4 @@
-#vers 0.0.3
+#vers 0.0.4
 
 import pytest
 
@@ -22,5 +22,8 @@ def test_all_requests(driver, swagger_url):
     #collecting requests + body
     searcher.collect_reqsts()
     searcher.collect_body_reqst()
+
+    #collecting body responses
+    searcher.collect_body_response()
 
     print("\n" + "Always is fine")
