@@ -20,6 +20,9 @@ Script for searching any requests on swagger page and building a list with reque
 # builder.py
 The main fabric of web-interactions with the driver.
 
+# request_sender.py
+Script for sending requests and correlation of received responses and collected. 
+
 # resources dir
 Use that if u have your own .env
 
