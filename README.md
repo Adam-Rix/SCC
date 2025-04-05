@@ -55,11 +55,17 @@ Always is fine
     "444": "3213" \
 },
 
+~~Total response codes found:21
+
+200 — OK, \
+400 — Bad Request, \
+401 — Unauthorized,
+
 # plans
 1. Improve request_searcher.py for: \
 1.1 Collecting bodies of each request; ✅\
 1.2 Collecting examples of each response; ✅\
-1.3 Replacing non-json responses by response-codes (200, 300, etc.) from examples of responses;
+1.3 Replacing non-json responses by response-codes (200, 300, etc.) from examples of responses ✅;
 2. Create a script for work with collections of requests from swagger; \
 2.1 Write a script for sending requests with api paths from 2 arrays; \
 2.2 Improve the script for correlating the response from server with expected; 

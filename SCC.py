@@ -21,7 +21,7 @@ def test_all_requests(driver, swagger_url):
 
     #collecting requests + body
     searcher.collect_reqsts()
-    searcher.collect_body_reqst()
+    searcher.collect_body_request()
 
     #collecting body responses
     searcher.collect_body_response()

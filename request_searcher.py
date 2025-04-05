@@ -1,4 +1,4 @@
-# #vers 0.0.5
+# #vers 0.1.0
 
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
@@ -33,7 +33,7 @@ class Searcher:
         for req in requests_list:
             print(f"{req['method']} - {req['path']}")
 
-    def collect_body_reqst(self):
+    def collect_body_request(self):
 
         body_elements = self.driver.find_elements(By.CSS_SELECTOR,
                                                   "pre.body-param__example.microlight")
@@ -57,15 +57,53 @@ class Searcher:
         body_response_elements = self.driver.find_elements(By.CSS_SELECTOR,
                                                   "pre.example.microlight")
 
-        body_responses_list = []
+        codes_table_rows = self.driver.find_elements(
+            By.CSS_SELECTOR,
+            "table.responses-table > tbody > tr"
+        )
+
+        body_responses_list = [] # for json-responses
+        response_codes_list = [] # for codes
 
         for body_response_element in body_response_elements:
-            body_responses_content = body_response_element.text.strip()
+            try:
+                body_responses_content = body_response_element.text.strip()
 
-            body_responses_list.append({
-                "body_response": body_responses_content
-            })
+                body_responses_list.append({
+                    "body_response": body_responses_content
+                })
+
+            except Exception as e:
+
+                print(f"⚠️ Alert: Wrong row for collecting {e}")
+                continue
+
+        for row in codes_table_rows:
+            try:
+                code = row.find_element(
+                    By.CLASS_NAME,
+                    "response-col_status"
+                ).text.strip()
+
+                description = row.find_element(
+                    By.CSS_SELECTOR,
+                    ".response-col_description .renderedMarkdown p"
+                ).text.strip()
+
+                response_codes_list.append({
+                    "code": code,
+                    "description": description
+                })
+
+            except Exception as e:
+
+                print(f"⚠️ Alert: Wrong row for collecting {e}")
+                continue
 
         print("\n" + f"~~Total examples of body responses found: {len(body_responses_list)}" + "\n")
         for bod in body_responses_list:
             print(f"{bod['body_response']},")
+
+        print("\n" + f"~~Total response codes found:{len(response_codes_list)}" + "\n")
+        for item in response_codes_list:
+            print(f"{item['code']} — {item['description']},")
