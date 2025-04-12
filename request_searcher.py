@@ -1,4 +1,4 @@
-#version 0.1.1
+#version 0.1.2
 
 from selenium.webdriver.common.by import By
 
@@ -32,6 +32,8 @@ class Searcher:
         for req in requests_list:
             print(f"{req['method']} - {req['path']}")
 
+        return requests_list
+
     def collect_body_request(self):
 
         body_elements = self.driver.find_elements(By.CSS_SELECTOR,
@@ -50,6 +52,8 @@ class Searcher:
         print("\n" + f"~~Total examples of body requests found: {len(body_requests_list)}" + "\n")
         for bod in body_requests_list:
             print(f"{bod['body_request']},")
+
+        return body_requests_list
 
     def collect_body_response(self):
 
@@ -106,3 +110,5 @@ class Searcher:
         print("\n" + f"~~Total response codes found:{len(response_codes_list)}" + "\n")
         for item in response_codes_list:
             print(f"{item['code']} — {item['description']},")
+
+        return body_responses_list, response_codes_list
